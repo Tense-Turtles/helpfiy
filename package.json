@@ -1,0 +1,28 @@
+{
+  "name": "helpfiy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanmaisai/helpfiy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanmaisai/helpfiy/issues"
+  },
+  "homepage": "https://github.com/thanmaisai/helpfiy#readme",
+  "dependencies": {
+    "@fleekhq/fleek-storage-js": "^1.0.22",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
