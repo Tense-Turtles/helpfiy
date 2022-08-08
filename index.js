@@ -115,7 +115,7 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
                 console.log('error', e);
             }
         }
-        alldataUpload(alldata);
+        await alldataUpload(alldata);
         await uploadPicFunction(theFile, fileType, PicKey);
         res.redirect('https://black-hill-6592.on.fleek.co/success.html');
     }
