@@ -62,6 +62,20 @@ const uploadPicFunction = async (data, ContentType, key) => {
     }
 }
 
+async function deleteAllData() {
+    try {
+        const result = await fleek.deleteFile({
+            apiKey,
+            apiSecret,
+            key: 'alldata.json',
+            bucket: '1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket',
+        });
+    } catch (e) {
+        console.log('error', e);
+    }
+
+}
+
 
 app.post('/createComplaint', upload.single('upfile'), (req, res) => {
     const fileName = req.file.originalname;
@@ -92,12 +106,7 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
 
 
         // delte old file and create new
-        await fleek.deleteFile({
-            apiKey,
-            apiSecret,
-            key: 'alldata.json',
-            bucket: '1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket',
-        });
+        await deleteAllData()
         // upload alldata
         const alldataUpload = async (data) => {
 
@@ -121,14 +130,14 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
     }
     getDB();
 
-    
+
     // uploadFunction(userName);
     // uploadFunction(userEmail);
     // uploadFunction(location);
     // uploadFunction(description);
 
 
-    
+
 
 
 })
