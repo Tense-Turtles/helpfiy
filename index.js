@@ -43,7 +43,6 @@ const uploadFunction = async (data) => {
     }
 }
 
-
 const uploadPicFunction = async (data, ContentType, key) => {
 
     const input = {
@@ -75,7 +74,20 @@ async function deleteAllData() {
     }
 
 }
+async function alldataUpload(data) {
+    const input = {
+        apiKey,
+        apiSecret,
+        key: 'alldata.json',
+        data,
+    };
 
+    try {
+        const result = await fleek.upload(input);
+    } catch (e) {
+        console.log('error', e);
+    }
+}
 
 app.post('/createComplaint', upload.single('upfile'), (req, res) => {
     const fileName = req.file.originalname;
@@ -88,47 +100,33 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
     var description = req.body.description;
     const date = new Date();
     const PicKey = date.getTime() + '.png';
-
+    var theElement = {
+        userName,
+        userEmail,
+        location,
+        description,
+        PicKey
+    }
     async function getDB() {
 
-        var theElement = {
-            userName,
-            userEmail,
-            location,
-            description,
-            PicKey
-        }
 
         const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
 
         alldata = await res.json();
-        alldata.push(theElement);
+        // alldata.push(theElement);
 
 
         // delte old file and create new
         await deleteAllData()
         // upload alldata
-        const alldataUpload = async (data) => {
-
-            const input = {
-                apiKey,
-                apiSecret,
-                key: 'alldata.json',
-                data,
-            };
-
-            try {
-                const result = await fleek.upload(input);
-                console.log(result);
-            } catch (e) {
-                console.log('error', e);
-            }
-        }
         await alldataUpload(alldata);
+
         await uploadPicFunction(theFile, fileType, PicKey);
+
         res.redirect('https://black-hill-6592.on.fleek.co/success.html');
     }
     getDB();
+
 
 
     // uploadFunction(userName);
