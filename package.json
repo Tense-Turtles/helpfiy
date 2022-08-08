@@ -20,7 +20,6 @@
   "homepage": "https://github.com/thanmaisai/helpfiy#readme",
   "dependencies": {
     "@fleekhq/fleek-storage-js": "^1.0.22",
-    "bulma": "^0.9.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "fs": "^0.0.1-security",

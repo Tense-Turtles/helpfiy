@@ -89,7 +89,9 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
     uploadFunction(userEmail);
     uploadFunction(location);
     uploadFunction(description);
+    
 
+    res.redirect('https://black-hill-6592.on.fleek.co/success.html');
     
 
 })
