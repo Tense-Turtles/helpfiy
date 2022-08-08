@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helpify</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helpify</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
+
 <body>
   <!--bg image-->
-    <!--nav-->
-    <nav class="navbar is-warning">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#" style="font-weight:bold;">
-            helpefy
-          </a>
-          <span class="navbar-burger burger" data-target="navMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-  
-        <div id="navMenu" class="navbar-menu">
-          <div class="navbar-end">
-            <a href="#" class="navbar-item is-active">Home</a>
-            <a href="#" class="navbar-item">raise complaint</a>
-            <a href="#" class="navbar-item">complaint status</a>
-            <a href="#" class="navbar-item">Donation</a>
-          </div>
+  <!--nav-->
+  <nav class="navbar is-warning">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#" style="font-weight:bold;">
+          helpefy
+        </a>
+        <span class="navbar-burger burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="#" class="navbar-item is-active">Home</a>
+          <a href="#" class="navbar-item">raise complaint</a>
+          <a href="#" class="navbar-item">complaint status</a>
+          <a href="#" class="navbar-item">Donation</a>
         </div>
       </div>
+<<<<<<< HEAD
     </nav>
     
     <!--raise complaint-->
@@ -46,127 +48,152 @@
             <div class="message-body">
               <p>Yeah there are some bad people out polluting our planet. Help us by raising a complaint</p>
               <div class="has-text-centered mt-5"><button class="button" id="raise-complaint">Raise complaint</button></div>
+=======
+    </div>
+  </nav>
+
+  <!--raise complaint-->
+  <section class="section" id="complaint">
+    <div class="column is-6">
+      <div>
+        <div class="message is-dark">
+          <div class="message-header">
+            <p> Yeah there are some bad people out polluting our planet</p>
+            <p> Help us by raising a complaint </p>
+          </div>
+          <div class="message-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque debitis eaque quas voluptates facilis
+              neque quia aliquam! Itaque deserunt odio quae sunt magnam quaerat laborum perspiciatis, a recusandae,
+              asperiores aperiam.</p>
+            <div class="has-text-centered mt-5"><button class="button" id="raise-complaint">Raise complaint</button>
+>>>>>>> d5dbea612d8a5af9be9456cf4c857eed15a443cb
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--complaint status-->
-    <section class="section" id="status">
-      <div class="column is-6">
-        <div>
-          <div class="message is-dark">
-            <div class="message-header">
-             <p>Thanks!</p> 
-             </div>
-            <div class="message-body">
-              <div><p> Worried about you complaint, Well you can check your status here !</p></div>
-              <div class="has-text-centered mt-5"><button class="button">Check status</button></div>
+  <!--complaint status-->
+  <section class="section" id="status">
+    <div class="column is-6">
+      <div>
+        <div class="message is-dark">
+          <div class="message-header">
+            <p>Thanks!</p>
+          </div>
+          <div class="message-body">
+            <div>
+              <p> Worried about you complaint, Well you can check your status here !</p>
             </div>
+            <div class="has-text-centered mt-5"><button class="button">Check status</button></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--raise complaint-->
-    <section class="section" id="donation">
-      <div class="column is-6">
-        <div>
-          <div class="message is-dark">
-            <div class="message-header">
-             <p>Helping always gives an upper hand</p>
-             </div>
-            <div class="message-body">
-              <p>Support the NGO's fighting to save our planet by donation</p>
-              <div class="has-text-centered mt-5"><button class="button">Donate</button></div>
-            </div>
+  <!--raise complaint-->
+  <section class="section" id="donation">
+    <div class="column is-6">
+      <div>
+        <div class="message is-dark">
+          <div class="message-header">
+            <p>Helping always gives an upper hand</p>
+          </div>
+          <div class="message-body">
+            <p>Support the NGO's fighting to save our planet by donation</p>
+            <div class="has-text-centered mt-5"><button class="button">Donate</button></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--model-->
-    <div class="modal ">
-      <div class="modal-background"></div>
-      <div class="modal-content has-background-white py-5 px-5">
-        <h3 class="title mb-6">Fill the below details</h3>
-        <form>
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Name">
-            </div>
+  <!--model-->
+  <div class="modal ">
+    <div class="modal-background"></div>
+    <div class="modal-content has-background-white py-5 px-5">
+      <h3 class="title mb-6">Fill the below details</h3>
+      <form enctype="multipart/form-data" method="POST" action="https://hackoheist.el.r.appspot.com/createComplaint">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input name="name" class="input" type="text" placeholder="Name">
           </div>
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-              <input class="input" type="email" placeholder="Email">
-            </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input name="email" class="input" type="email" placeholder="Email">
           </div>
-          <div class="field">
-            <label class="label">Location</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Address">
-            </div>
+        </div>
+        <div class="field">
+          <label class="label">Location</label>
+          <div class="control">
+            <input name="location" class="input" type="text" placeholder="Address">
           </div>
-          <div class="field">
-            <label class="label">Can you explain the senario</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
-            </div>
+        </div>
+        <div class="field">
+          <label class="label">Can you explain the senario</label>
+          <div class="control">
+            <textarea name="description" class="textarea" placeholder="Textarea"></textarea>
           </div>
+        </div>
 
 
-          <div class="field">
-            <label class="label">Uplode an image to help us </label>
-            <div class="file has-name">
-              <label class="file-label">
-                <input class="file-input" type="file" name="resume">
-                <span class="file-cta">
-                  <span class="file-icon">
-                    <i class="fas fa-upload"></i>
-                  </span>
-                  <span class="file-label">
-                    Choose a file…
-                  </span>
+        <div class="field">
+          <label class="label">Uplode an image to help us </label>
+          <div class="file has-name">
+            <label class="file-label">
+              <input class="file-input" type="file" name="upfile">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
                 </span>
-                <span class="file-name">
-                  Screen Shot 2017-07-29 at 15.54.25.png <!--change this -->
+                <span class="file-label">
+                  Choose a file…
                 </span>
-              </label>
-            </div>
+              </span>
+              <span class="file-name">
+                Screen Shot 2017-07-29 at 15.54.25.png
+                <!--change this -->
+              </span>
+            </label>
           </div>
+        </div>
 
 
-          <div class="field">
+        <!-- <div class="field">
             <div class="control">
               <label class="checkbox">
                 <input type="checkbox">
                 I agree to the <a href="#">terms and conditions</a>
               </label>
             </div>
-          </div>
-          <div class="mt-6 has-text-centered">
-            <button class="button is-danger">Raise it</button>
-          </div>
-        </form>
-      </div>
+          </div> -->
+        <div class="mt-6 has-text-centered">
+          <input id="button" class="button" type="submit" value="Raise it">
+
+        </div>
+      </form>
     </div>
+  </div>
 
-    <!--Java Script-->
-    <script>
-      const complaintbutton = document.querySelector('#raise-complaint');
-      const modalBg = document.querySelector('.modal-background');
-      const modal = document.querySelector('.modal');
+  <!--Java Script-->
+  <script>
+    const complaintbutton = document.querySelector('#raise-complaint');
+    const modalBg = document.querySelector('.modal-background');
+    const modal = document.querySelector('.modal');
 
-      complaintbutton.addEventListener('click', () => {
-        modal.classList.add('is-active');
-      })
+    complaintbutton.addEventListener('click', () => {
+      modal.classList.add('is-active');
+    })
 
-      modalBg.addEventListener('click', () => {
-        modal.classList.remove('is-active');
-      })
-    </script>
-  </body>
+    modalBg.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+    })
+  </script>
+</body>
+
 </html>
