@@ -8,32 +8,34 @@
   <title>Helpify</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 </head>
+
 <body>
-    <!--bg image-->
-    <!--nav-->
-    <nav class="navbar is-warning">
-        <div class="container">
-            <div class="navbar-brand">
-                    <a class="navbar-item" href="#" style="font-weight:bold;">
-                      helpefy
-                    </a>
-                    <span class="navbar-burger burger" data-target="navMenu">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-            </div>
-    
-            <div id="navMenu" class="navbar-menu">
-                  <div class="navbar-end">
-                    <a href="index.html" class="navbar-item is-active">Home</a>
-                    <a href="#complaint" class="navbar-item">raise complaint</a>
-                    <a href="#status" class="navbar-item">complaint status</a>
-                    <a href="#donation" class="navbar-item">Donation</a>
-                  </div>
-            </div>
+  <!--bg image-->
+  <!--nav-->
+  <nav class="navbar is-warning">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#" style="font-weight:bold;">
+          helpefy
+        </a>
+        <span class="navbar-burger burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="index.html" class="navbar-item is-active">Home</a>
+          <a href="#complaint" class="navbar-item">raise complaint</a>
+          <a href="#status" class="navbar-item">complaint status</a>
+          <a href="#donation" class="navbar-item">Donation</a>
         </div>
+      </div>
+    </div>
   </nav>
 
   <!--raise complaint-->
@@ -41,82 +43,78 @@
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-6">
-          <img
-            class="left-image"
-            src="assets/images/homepage-image.png"
-            alt="Bildname"
-          />
+          <img class="left-image" src="assets/images/homepage-image.png" alt="Bildname" />
         </div>
         <div class="column is-8">
           <div class="column is-10 is-left">
             <div>
               <div class="message is-dark">
                 <div class="message-header">
-                    <p> Yeah there are some bad people out polluting our planet</p>
-                    <p> Help us by raising a complaint </p>
+                  <p> Yeah there are some bad people out polluting our planet</p>
+                  <p> Help us by raising a complaint </p>
                 </div>
                 <div class="message-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque debitis eaque quas voluptates facilis
-                      neque quia aliquam! Itaque deserunt odio quae sunt magnam quaerat laborum perspiciatis, a recusandae,
-                      asperiores aperiam.</p>
-                    <div class="has-text-centered mt-5"><button class="button" id="raise-complaint">Raise complaint</button>
-                    </div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque debitis eaque quas voluptates
+                    facilis
+                    neque quia aliquam! Itaque deserunt odio quae sunt magnam quaerat laborum perspiciatis, a
+                    recusandae,
+                    asperiores aperiam.</p>
+                  <div class="has-text-centered mt-5"><button class="button" id="raise-complaint">Raise
+                      complaint</button>
                   </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-</section>
+  </section>
 
-<!--complaint status-->
-<section class="section" id="status">
+  <!--complaint status-->
+  <section class="section" id="status">
     <div class="container">
       <div class="columns is-vcentered">
-        
+
         <div class="column is-6">
           <div class="column is-10 is-left">
             <div>
               <div class="message is-dark">
                 <div class="message-header">
-                 <p>Helping always gives an upper hand</p>
-                 </div>
-                 <div class="message-body">
-                    <div><p> Worried about you complaint, Well you can check your status here !</p></div>
-                    <div class="has-text-centered mt-5"><button class="button">Check status</button></div>
+                  <p>Helping always gives an upper hand</p>
+                </div>
+                <div class="message-body">
+                  <div>
+                    <p> Worried about you complaint, Well you can check your status here !</p>
                   </div>
+                  <div class="has-text-centered mt-5"><button onclick="checkStatus()" class="button">Check
+                      status</button></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="column is-6">
-            <img
-              class="left-image"
-              src="assets/images/homepage-image.png"
-              alt="status"
-            />
-          </div>
+          <img class="left-image" src="assets/images/homepage-image.png" alt="status" />
+        </div>
       </div>
-</section>
+  </section>
 
-<!--Donation-->
+  <div id="statusContainer" class="container"></div>
+  <!--Donation-->
+
   <section class="section" id="donation">
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-6">
-          <img
-            class="left-image"
-            src="assets/images/homepage-image.png"
-            alt="Bildname"
-          />
+          <img class="left-image" src="assets/images/homepage-image.png" alt="Bildname" />
         </div>
         <div class="column is-8">
           <div class="column is-10 is-left">
             <div>
               <div class="message is-dark">
                 <div class="message-header">
-                 <p>Helping always gives an upper hand</p>
-                 </div>
+                  <p>Helping always gives an upper hand</p>
+                </div>
                 <div class="message-body">
                   <p>Support the NGO's fighting to save our planet by donation</p>
                   <div class="has-text-centered mt-5"><button class="button">Donate</button></div>
@@ -126,36 +124,36 @@
           </div>
         </div>
       </div>
-</section>
+  </section>
 
-<!--model-->
-<div class="modal ">
+  <!--model-->
+  <div class="modal ">
     <div class="modal-background"></div>
     <div class="modal-content has-background-white py-5 px-5">
       <h3 class="title mb-6">Fill the below details</h3>
       <form enctype="multipart/form-data" method="POST" action="https://hackoheist.el.r.appspot.com/createComplaint">
-<!--name-->
+        <!--name-->
         <div class="field">
           <label class="label">Name</label>
           <div class="control">
             <input name="name" class="input" type="text" placeholder="Name">
           </div>
         </div>
-<!--emial-->
+        <!--emial-->
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
             <input name="email" class="input" type="email" placeholder="Email">
           </div>
         </div>
-<!--location-->
+        <!--location-->
         <div class="field">
           <label class="label">Location</label>
           <div class="control">
             <input name="location" class="input" type="text" placeholder="Address">
           </div>
         </div>
-<!--textarea-->
+        <!--textarea-->
         <div class="field">
           <label class="label">Can you explain the senario</label>
           <div class="control">
@@ -163,40 +161,40 @@
           </div>
         </div>
 
-<!--file uploder-->
-  <div class="field" id="uplodefield">
-    <label class="label">Uplode an image to help us </label>
-    <div class="file has-name">
-      <label class="file-label">
-        <input class="file-input" type="file" name="upfile">
-        <span class="file-cta">
-          <span class="file-icon">
-            <i class="fas fa-upload"></i>
-          </span>
-          <span class="file-label">
-            Choose a file…
-          </span>
-        </span>
-        <span class="file-name">
-            Not yet selected
-          <!--change this -->
-        </span>
-      </label>
+        <!--file uploder-->
+        <div class="field" id="uplodefield">
+          <label class="label">Uplode an image to help us </label>
+          <div class="file has-name">
+            <label class="file-label">
+              <input class="file-input" type="file" name="upfile">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Choose a file…
+                </span>
+              </span>
+              <span class="file-name">
+                Not yet selected
+                <!--change this -->
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!--button-->
+        <div class="field">
+          <div class="mt-6 has-text-centered">
+            <input id="button" class="button" type="submit" value="Raise it">
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 
-<!--button-->
-        <div class="field">
-                    <div class="mt-6 has-text-centered">
-                      <input id="button" class="button" type="submit" value="Raise it">
-                    </div>
-                    </div>
-                  </form>
-                </div>
-        </div>
 
-
-      <!--Java Script-->
+  <!--Java Script-->
   <script>
     const complaintbutton = document.querySelector('#raise-complaint');
     const modalBg = document.querySelector('.modal-background');
@@ -208,16 +206,92 @@
     modalBg.addEventListener('click', () => {
       modal.classList.remove('is-active');
     })
-//file uploder
+    //file uploder
     const fileInput = document.querySelector('#uplodefield input[type=file]');
-  fileInput.onchange = () => {
-    if (fileInput.files.length > 0) {
-      const fileName = document.querySelector('#uplodefield .file-name');
-      fileName.textContent = fileInput.files[0].name;
+    fileInput.onchange = () => {
+      if (fileInput.files.length > 0) {
+        const fileName = document.querySelector('#uplodefield .file-name');
+        fileName.textContent = fileInput.files[0].name;
+      }
     }
-  }
-    </script>
-    <!--display status-->
-    <!--donation-->
-  </body>
+  </script>
+  <!--display status-->
+  <script>
+    // var btn = document.createElement("button");
+    // btn.onclick = fun()
+    // btn.innerHTML = 'Create Button'
+
+    async function checkStatus() {
+      const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
+      alldata = await res.json();
+      alldata = alldata['issues']
+      for (var i = 0; i < alldata.length; i++) {
+
+        var card = document.createElement("div");
+        card.id = "card" + i;
+        card.className = "card"
+        var cardImage = document.createElement("div");
+        cardImage.id = "cardImage" + i;
+        cardImage.className = "card-image";
+        var image = document.createElement("img");
+        image.src = 'https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/' + alldata[i].PicKey;
+        var cardContent = document.createElement("div");
+        cardContent.id = "cardContent" + i;
+        cardContent.className = 'card-content';
+        var mediaContent = document.createElement("div");
+        mediaContent.id = 'mediaContent' + i;
+        mediaContent.className = 'media-content'
+        var content = document.createElement("div");
+        content.id = 'content' + i;
+        content.className = 'content';
+        var myBr = document.createElement('br');
+        var title = document.createElement('p');
+        title.className = 'title is-4'
+        title.innerHTML = alldata[i].location;
+        var subtitle = document.createElement('p');
+        subtitle.className = 'subtitle is-6'
+        subtitle.innerHTML = alldata[i].userName + ", " + alldata[i].userEmail
+        var cardFooter = document.createElement("footer");
+        cardFooter.id = "card-footer" + i;
+        cardFooter.className = "card-footer";
+
+        var footbtn1 = document.createElement("a");
+        footbtn1.id = "footbtn1" + i;
+        footbtn1.className = "card-footer-item";
+        if (alldata[i].status == 0) {
+          footbtn1.innerHTML = 'Issue is Open'
+        } else if (alldata[i].status == 1) {
+          footbtn1.innerHTML = 'Investigating'
+        } else if (alldata[i].status == 2) {
+          footbtn1.innerHTML = 'Issue Closed'
+        }
+
+        // var footbtn2 = document.createElement("a");
+        // footbtn2.id = "footbtn2" + i;
+        // footbtn2.className = "card-footer-item";
+        // footbtn2.innerHTML = 'Close'
+
+        document.getElementById('statusContainer').appendChild(card);
+        document.getElementById("card" + i).appendChild(cardImage);
+        document.getElementById("cardImage" + i).appendChild(image);
+        document.getElementById("card" + i).appendChild(cardContent);
+        document.getElementById("cardContent" + i).appendChild(mediaContent);
+        document.getElementById('mediaContent' + i).appendChild(title);
+        document.getElementById('mediaContent' + i).appendChild(subtitle);
+
+        document.getElementById("cardContent" + i).appendChild(myBr);
+        document.getElementById("cardContent" + i).appendChild(content);
+        document.getElementById("card" + i).appendChild(cardFooter);
+        document.getElementById("card-footer" + i).appendChild(footbtn1);
+        // document.getElementById("card-footer" + i).appendChild(footbtn2);
+
+        content.innerHTML = alldata[i].description
+      }
+    }
+
+
+  </script>
+  <!--donation-->
+</body>
+
 </html>
