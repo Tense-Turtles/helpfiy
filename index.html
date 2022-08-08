@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Save earth</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="home.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar is-warning">
+      <div class="container">
+        <div class="navbar-brand">
+          <a >
+            <img src="frontend/assets/images/templogo.png" style="max-height: 70px;" class="py-2 px-2"> <!--change logo-->
+          </a>
+          <a class="navbar-item" href="#" style="font-weight:bold;">
+           helpefy
+          </a>
+          <span class="navbar-burger burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="#" class="navbar-item is-active">Home</a>
+            <a href="frontend/public.html" class="navbar-item">Public</a>
+            <a href="frontend/ngo.html" class="navbar-item">NGO</a>
+            <a href="#" class="navbar-item">Github</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!--homepage info-->
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered is-multiline px-0">
+      <div class="column is-2">
+        <h1 class="is-size-1 is-size-1-desktop title">Save planet Earth</h1>
+        <h1 class="is-size-4 is-size-4-desktop subtitle">All of it starts from you!</h1>
+      </div>
+      <div class="column is-7-tablet"><img src="frontend/assets/images/main-bg.png" alt="plant image" class="px-6 py-6"></div><!--change logo-->
+      <div class="column is-3"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas provident beatae libero. Minus fugit libero vitae! Quam veniam reiciendis voluptatum inventore voluptatibus placeat officiis possimus ad omnis aliquam, magnam dignissimos?</p></div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<!--tabs for ngo and public-->
+<section class="section">
+  <div class="container">
+    <div class="columns is-8">
+      <div class="column is-7">
+        <div class="tabs is-boxed">
+          <ul><li class="is-active" data-target="public-user">
+            <a>
+              Public
+            </a>
+          </li data-target="ngo-user">
+          <a>
+            NGO
+          </a></ul>
+        </div>
+        <div class="px-2" id="tab-conent">
+          <div id="public-user">
+            <h3 class="is-size-4 title">hey Public</h3>
+            <h4 class="is-size-5 subtitle">Welcome to helpif</h3>
+            <h5 class="is-size-6 subtitle">click the below button to get started</h3>
+          </div>
+          <div id="ngo-user" class="is-hidden">
+            <h3 class="is-size-4 title">hey NGO</h3>
+            <h4 class="is-size-5 subtitle">Welcome to helpif</h3>
+            <h5 class="is-size-6 subtitle">click the below button to get started</h3>
+          </div>
+        </div>
+      </div>
+      <div class="column is-5"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque voluptas quae enim sunt reprehenderit tempora incidunt? Cum beatae architecto itaque unde nobis ducimus nulla, omnis saepe debitis labore mollitia hic.</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+      //nav
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();
+
+      //tab
+      const tabs = document.querySelectorAll('.tabs li');
+      const tabContentBoxes = document.querySelectorAll('#tab-content > div');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(item => item.classList.remove('is-active'));
+          tab.classList.add('is-active');
+        
+          const target = tab.dataset.target;
+          // console.log(target);
+          tabContentBoxes.forEach(box => {
+            if (box.getAttribute('id') === target) {
+              box.classList.remove('is-hidden');
+            } else {
+              box.classList.add('is-hidden');
+            }
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
