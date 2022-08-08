@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script>
+
+    async function fun() {
+      const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
+      alldata = await res.json();
+      alldata = alldata['issues']
+      for (var i = 0; i < alldata.length; i++) {
+        // var btn = document.createElement("button");
+        // btn.innerHTML = "Click me";
+        // btn.style = "padding: 10px"
+        var card = document.createElement("div");
+        card.id = "card" + i;
+        card.className = "card"
+        // card.style = "width: 28%;"
+        var cardImage = document.createElement("div");
+        cardImage.id = "cardImage" + i;
+        cardImage.className = "card-image";
+        var image = document.createElement("img");
+        image.src = 'https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/'+alldata[i].PicKey;
+        var cardContent = document.createElement("div");
+        cardContent.id = "cardContent" + i;
+        cardContent.className = 'card-content';
+        var mediaContent = document.createElement("div");
+        mediaContent.id = 'mediaContent' + i;
+        mediaContent.className = 'media-content'
+        var content = document.createElement("div");
+        content.id = 'content' + i;
+        content.className = 'content';
+        var myBr = document.createElement('br');
+        var title = document.createElement('p');
+        title.className = 'title is-4'
+        title.innerHTML = alldata[i].location;
+        var subtitle = document.createElement('p');
+        subtitle.className = 'subtitle is-6'
+        subtitle.innerHTML = alldata[i].userName + "\n" + alldata[i].userEmail
+
+        document.getElementById('container').appendChild(card);
+        document.getElementById("card" + i).appendChild(cardImage);
+        document.getElementById("cardImage" + i).appendChild(image);
+        document.getElementById("card" + i).appendChild(cardContent);
+        document.getElementById("cardContent" + i).appendChild(mediaContent);
+        document.getElementById('mediaContent' + i).appendChild(title);
+        document.getElementById('mediaContent' + i).appendChild(subtitle);
+
+        document.getElementById("cardContent" + i).appendChild(myBr);
+        document.getElementById("cardContent" + i).appendChild(content);
+        content.innerHTML = alldata[i].description
+        // divcard.innerHTML = appendChild();
+        // div.innerHTML = alldata[i].userName
+        // document.getElementById('insider').appendChild(div);
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <button onclick="fun()"> Create Button </button>
+
+  <div class="container columns is-3-desktop is-1-mobile" id="container"></div>
+
+  <!-- 
+  <div class="card" style="width: 28%;">
+
+    <div class="card-image">
+      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+    </div>
+
+    <div class="card-content">
+
+      <div class="media-content">
+        <p class="title">John Smith</p>
+        <p class="subtitle">@johnsmith</p>
+      </div>
+      <br>
+      <div class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+      </div>
+    </div>
+  </div> -->
+</body>
+
+</html>
