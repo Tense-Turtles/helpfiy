@@ -46,7 +46,6 @@ const uploadFunction = async (data) => {
 
 const uploadPicFunction = async (data, ContentType, key) => {
 
-
     const input = {
         apiKey,
         apiSecret,
@@ -117,17 +116,19 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
             }
         }
         alldataUpload(alldata);
+        await uploadPicFunction(theFile, fileType, PicKey);
+        res.redirect('https://black-hill-6592.on.fleek.co/success.html');
     }
     getDB();
 
-    uploadPicFunction(theFile, fileType, PicKey);
+    
     // uploadFunction(userName);
     // uploadFunction(userEmail);
     // uploadFunction(location);
     // uploadFunction(description);
 
 
-    res.redirect('https://black-hill-6592.on.fleek.co/success.html');
+    
 
 
 })
