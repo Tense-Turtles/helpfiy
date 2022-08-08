@@ -15,23 +15,25 @@ class _WebViewStackState extends State<WebViewStack> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        WebView(
-          initialUrl: 'https://black-hill-6592.on.fleek.co/',
-          onPageStarted: (url) {
-            setState(() {
-              loadingPercentage = 0;
-            });
-          },
-          onProgress: (progress) {
-            setState(() {
-              loadingPercentage = progress;
-            });
-          },
-          onPageFinished: (url) {
-            setState(() {
-              loadingPercentage = 100;
-            });
-          },
+        Center(
+          child: WebView(
+            initialUrl: 'https://black-hill-6592.on.fleek.co/',
+            onPageStarted: (url) {
+              setState(() {
+                loadingPercentage = 0;
+              });
+            },
+            onProgress: (progress) {
+              setState(() {
+                loadingPercentage = progress;
+              });
+            },
+            onPageFinished: (url) {
+              setState(() {
+                loadingPercentage = 100;
+              });
+            },
+          ),
         ),
         if (loadingPercentage < 100)
           LinearProgressIndicator(
