@@ -19,7 +19,7 @@
           <!--change logo-->
         </a>
         <a class="navbar-item" href="#" style="font-weight:bold;">
-          Helpify
+          HELPIFY 
         </a>
         <span class="navbar-burger burger" data-target="navMenu">
           <span></span>
@@ -30,10 +30,10 @@
 
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a href="#" class="navbar-item is-active">Home</a>
-          <a href="public.html" class="navbar-item">Public</a>
+          <a href="#" class="navbar-item is-active">HOME</a>
+          <a href="public.html" class="navbar-item">PUBLIC</a>
           <a href="ngo.html" class="navbar-item">NGO</a>
-          <a href="https://github.com/thanmaisai/helpfiy" class="navbar-item">Github</a>
+          <a href="https://github.com/thanmaisai/helpfiy" class="navbar-item">GITHUB</a>
         </div>
       </div>
     </div>
@@ -50,8 +50,8 @@
         <div class="column is-7-tablet"><img src="assets/images/main-doodle.png" alt="plant image" class="px-6 py-6"></div>
         <!--change logo-->
         <div class="column is-3">
-          <p style="text-align:center;">" You cannot get through a single day without having an impact on the world around you. 
-            What you do makes a difference and you have to decide what kind of a difference you want to make. "
+          <p style="text-align:center;"><strong>" You cannot get through a single day without having an impact on the world around you. 
+            What you do makes a difference and you have to decide what kind of a difference you want to make. "</strong>
             </p>
           <p style="text-align:right;">–Jane Goodall</p>​
         </div>
@@ -65,34 +65,57 @@
   <!--tabs for ngo and public-->
   <section class="section">
     <div class="container">
-      <div class="columns is-8">
-        <div class="column is-7">
-          <div class="tabs is-boxed">
+      <div class="columns is-variable is-8">
+        <div class="column is-7-tablet">
+          <!-- tabs -->
+          <div class="tabs is-boxed is-centered">
             <ul>
-              <li class="is-active" data-target="public-user">
-                <a>
-                  Public
-                </a>
-              </li data-target="ngo-user">
-              <a>
-                NGO
-              </a>
+              <li class="is-active" data-target="public-tabs">
+                <a>Public</a> 
+              </li>
+              <li data-target="Ngo-tab">
+                <a>  NGO</a>
+              </li>
             </ul>
           </div>
-          <div class="px-2" id="tab-conent">
-            <div id="public-user">
-              <h3 class="is-size-4 title">hey Public</h3>
-              <h4 class="is-size-5 subtitle">Welcome to helpif</h3>
-                <h5 class="is-size-6 subtitle">click the below button to get started</h3>
-            </div>
-            <div id="ngo-user" class="is-hidden">
-              <h3 class="is-size-4 title">hey NGO</h3>
-              <h4 class="is-size-5 subtitle">Welcome to helpif</h3>
-                <h5 class="is-size-6 subtitle">click the below button to get started</h3>
+          <div class="px-2" id="tab-content">
+            <div id="public-tabs">
+              <h3 class="is-size-4 title">Hey User</h3>
+              <h3 class="is-size-5 subtitle">Welcome to Helpify</h3>
+              <p>We all need to do our part to save the environment. 
+                So from this World Environment Day! Let's all make some small changes that will have big impacts on 
+                the future of the planet.
+
+              </p>
+              <h3 class="is-size-6 title">click the below button to get started</h3>
+                <div class="mt-4">
+                  <input id="button User" class="button is-warning"  onClick="myFunction()" type="submit" value="Public Page">
+                    <script>
+                      function myFunction() {
+                        window.location.href="public.html";
+                      }
+                    </script>
+                </div>
+              </div>
+
+            <div id="Ngo-tab" class="is-hidden">
+              <h3 class="is-size-4 title">Hey NGO</h3>
+              <h3 class="is-size-5 subtitle">Welcome to Helpify</h3>
+                <p>As per the World Health Organization an NGO is a voluntary group of people organized to achieve a set of common goals.
+                  <br>
+                  So lets take a step forward and achieve our goal to save earth.
+                </p>
+                <h3 class="is-size-6 title">click the below button to get started</h3>
+                <input id="button User" class="button is-warning"  onClick="myFunction()" type="submit" value="NGO Page">
+                    <script>
+                      function myFunction() {
+                        window.location.href="ngo.html";
+                      }
+                    </script>
             </div>
           </div>
         </div>
-        <div class="column is-5">
+        <div class="column is-5-tablet">
           <p>How Can You Help Nature Every Day<br><br>Save resources<br>Saving electricity and water is a matter of a couple of minutes.</p>
         </div>
       </div>
@@ -100,7 +123,7 @@
   </section>
 
 
-
+  <!--Java script-->
   <script type="text/javascript">
     //nav
     (function () {
@@ -138,11 +161,11 @@
 
 <footer class="footer">
   <div class="content has-text-centered">
+    <p><strong>We are in this together. Let’s help save our planet</strong></p>
     <p>
       <strong>Helpify</strong> by <a href="https://github.com/thanmaisai">THANMAI SAI P</a>,<a href="https://github.com/shell-raiser">K S SHAILESH </a>,<a href="https://github.com/Beast-Sanjay">SANJAY C H</a>.
       The website has been developed for <strong>Hackoheist</strong>
     </p>
   </div>
 </footer>
-
 </html>
