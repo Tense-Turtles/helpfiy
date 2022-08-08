@@ -20,17 +20,7 @@ app.get('/', function (req, res) {
     res.send('hello, this is just a backend. The link for the frontend will be added here soon')
 })
 
-app.get('/getDB', function (req, res) {
-    async function getDB() {
 
-        const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
-
-        alldata = await res.json();
-        console.log(alldata)
-
-    }
-    getDB();
-})
 
 
 
@@ -41,7 +31,7 @@ const uploadFunction = async (data) => {
     const input = {
         apiKey,
         apiSecret,
-        key: `file-${timestamp}.txt`,
+        key: `${timestamp}.txt`,
         data,
     };
 
@@ -52,14 +42,15 @@ const uploadFunction = async (data) => {
         console.log('error', e);
     }
 }
-const uploadPicFunction = async (data, ContentType) => {
-    const date = new Date();
-    const timestamp = date.getTime();
+
+
+const uploadPicFunction = async (data, ContentType, key) => {
+
 
     const input = {
         apiKey,
         apiSecret,
-        key: `file-${timestamp}.png`,
+        key,
         data,
         ContentType
     };
@@ -82,17 +73,62 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
     var userEmail = req.body.email;
     var location = req.body.location;
     var description = req.body.description;
+    const date = new Date();
+    const PicKey = date.getTime() + '.png';
+
+    async function getDB() {
+
+        var theElement = {
+            userName,
+            userEmail,
+            location,
+            description,
+            PicKey
+        }
+
+        const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
+
+        alldata = await res.json();
+        alldata.push(theElement);
 
 
-    uploadPicFunction(theFile,fileType);
-    uploadFunction(userName);
-    uploadFunction(userEmail);
-    uploadFunction(location);
-    uploadFunction(description);
-    
+        // delte old file and create new
+        await fleek.deleteFile({
+            apiKey,
+            apiSecret,
+            key: 'alldata.json',
+            bucket: '1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket',
+        });
+        // upload alldata
+        const alldataUpload = async (data) => {
+
+            const input = {
+                apiKey,
+                apiSecret,
+                key: 'alldata.json',
+                data,
+            };
+
+            try {
+                const result = await fleek.upload(input);
+                console.log(result);
+            } catch (e) {
+                console.log('error', e);
+            }
+        }
+        alldataUpload(alldata);
+    }
+    getDB();
+
+    uploadPicFunction(theFile, fileType, PicKey);
+    // uploadFunction(userName);
+    // uploadFunction(userEmail);
+    // uploadFunction(location);
+    // uploadFunction(description);
+
 
     res.redirect('https://black-hill-6592.on.fleek.co/success.html');
-    
+
 
 })
 
