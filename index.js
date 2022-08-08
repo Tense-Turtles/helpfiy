@@ -105,7 +105,8 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
         userEmail,
         location,
         description,
-        PicKey
+        PicKey,
+        status: 0
     }
     async function getDB() {
 
@@ -142,7 +143,9 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
 })
 
 
+// app.post('/updateStatus', function(req,res){
 
+// })
 
 
 
