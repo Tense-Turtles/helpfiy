@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo FLEEK_API_KEY=${{ secrets.fleek_api_key }} >> .env
+          echo FLEEK_API_SECRET=${{ secrets.fleek_api_secret }} >> .env
+
+
       - uses: google-github-actions/deploy-appengine@main
         with:
           credentials: ${{ secrets.gcp_credentials }}
