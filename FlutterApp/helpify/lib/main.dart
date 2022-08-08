@@ -14,10 +14,13 @@ class WebViewApp extends StatelessWidget {
       title: 'Helpify',
       home: Scaffold(
         extendBodyBehindAppBar: false,
-        appBar: AppBar(
+        appBar: PreferredSize(
+
+             preferredSize: Size.fromHeight(0.02), 
+             child: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text(''),
+          title: Text(''),)
         ),
         body: Center(
           child: WebView(
