@@ -39,7 +39,7 @@
           title.innerHTML = alldata[i].location;
           var subtitle = document.createElement('p');
           subtitle.className = 'subtitle is-6'
-          subtitle.innerHTML = alldata[i].userName + "\n" + alldata[i].userEmail
+          subtitle.innerHTML = alldata[i].userName + ", " + alldata[i].userEmail
           var cardFooter = document.createElement("footer");
           cardFooter.id = "card-footer" + i;
           cardFooter.className = "card-footer";
@@ -47,9 +47,11 @@
           var footbtn1 = document.createElement("a");
           footbtn1.id = "footbtn1" + i;
           footbtn1.className = "card-footer-item";
+          footbtn1.innerHTML = 'Investigating'
           var footbtn2 = document.createElement("a");
           footbtn2.id = "footbtn2" + i;
           footbtn2.className = "card-footer-item";
+          footbtn2.innerHTML = 'Close'
 
           document.getElementById('container').appendChild(card);
           document.getElementById("card" + i).appendChild(cardImage);
@@ -79,7 +81,7 @@
 
   <div class="container columns is-3-desktop is-1-mobile" id="container"></div>
 
-<!-- 
+  <!-- 
   <div class="card" style="width: 28%;">
 
     <div class="card-image">
