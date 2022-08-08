@@ -4,30 +4,34 @@ import 'package:flutter/material.dart';
 import 'package:helpify/webstack.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: WebViewApp(),
-    ),
-  );
-}
+void main() => runApp(
+      WebViewApp(),
+    );
 
-class WebViewApp extends StatefulWidget {
-  const WebViewApp({super.key});
-
-  @override
-  State<WebViewApp> createState() => _WebViewAppState();
-}
-
-class _WebViewAppState extends State<WebViewApp> {
+class WebViewApp extends StatelessWidget {
+  late WebViewController _controller;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Text('Flutter WebView'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Helpify',
+      home: Scaffold(
+        extendBodyBehindAppBar: false,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Text(''),
+        ),
+        body: Center(
+          child: WebView(
+            initialUrl: 'https://black-hill-6592.on.fleek.co/',
+            javascriptMode: JavascriptMode.unrestricted,
+            onWebViewCreated: (WebViewController webcontroller) {
+              _controller = webcontroller;
+            },
+          ),
+        ),
       ),
-      body: WebViewStack(), // Replace the WebView widget with WebViewStack
     );
   }
 }
