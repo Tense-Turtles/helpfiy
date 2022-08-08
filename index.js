@@ -3,7 +3,7 @@ require('dotenv').config()
 var app = express();
 
 app.get('/',function(req,res){
-    res.send('hello, this is just a backend')
+    res.send('hello, this is just a backend. The link for the frontend will be added here soon')
 })
 
 
