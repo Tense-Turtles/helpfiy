@@ -114,12 +114,13 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
 
         alldata = await res.json();
         // alldata.push(theElement);
+        alldata['issues'].push(theElement)
 
 
         // delte old file and create new
         await deleteAllData()
         // upload alldata
-        await alldataUpload(alldata);
+        await alldataUpload(JSON.stringify(alldata));
 
         await uploadPicFunction(theFile, fileType, PicKey);
 
