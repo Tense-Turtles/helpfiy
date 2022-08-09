@@ -81,7 +81,8 @@
                     <p> Worried about you issue, Well you can check your status here !</p>
                   </div>
                   <div class="has-text-centered mt-5"><button onclick="checkStatus()" class="button is-warning">Check
-                      status</button></div>
+                      status</button>
+                    </div>
                 </div>
               </div>
             </div>
@@ -111,7 +112,13 @@
                 </div>
                 <div class="message-body">
                   <p>Donate to non governmental organizations and help them to save our plant</p>
-                  <div class="has-text-centered mt-5"><button class="button is-warning">Donate</button></div>
+                  <div class="has-text-centered mt-5"><button onclick="donation()" class="button is-warning">Donate</button>
+                    <script>
+                      function donation() {
+                        window.location.href="donation.html";
+                      }
+                    </script>
+                  </div>
                 </div>
               </div>
             </div>
