@@ -28,14 +28,14 @@
 
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a href="index.html" class="navbar-item is-active">Home</a>
-          <a href="#complaint" class="navbar-item">raise complaint</a>
-          <a href="#status" class="navbar-item">complaint status</a>
-          <a href="#donation" class="navbar-item">Donation</a>
         </div>
       </div>
     </div>
   </nav>
+  <a href="index.html" class="navbar-item">Home</a>
+  <a href="#complaint" class="navbar-item">raise complaint</a>
+  <a href="#status" class="navbar-item">complaint status</a>
+  <a href="#donation" class="navbar-item">Donation</a>
 
   <!--raise complaint-->
   <section class="section" id="complaint">
@@ -211,6 +211,19 @@
   </script>
   <!--display status-->
   <script>
+
+    //nav
+    (function () {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#' + burger.dataset.target);
+
+      burger.addEventListener('click', function () {
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+
+    
     // var btn = document.createElement("button");
     // btn.onclick = fun()
     // btn.innerHTML = 'Create Button'
