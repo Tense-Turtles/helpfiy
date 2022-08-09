@@ -33,7 +33,7 @@
     </div>
   </nav>
   <a href="index.html" class="navbar-item">Home</a>
-  <a href="#complaint" class="navbar-item">raise complaint</a>
+  <a href="#complaint" class="navbar-item">Raise Issue</a>
   <a href="#status" class="navbar-item">complaint status</a>
   <a href="#donation" class="navbar-item">Donation</a>
 
@@ -53,8 +53,7 @@
                 </div>
                 <div class="message-body">
                   <p>There are many NGOs that can help you in your fight to protect environment. They work tirelessly to ensure that there will be a healthy planet earth for future generations too. You can join hands with them and contribute towards their cause of protecting the environment by raising a complaint against those who are polluting our planet earth. </p>
-                  <div class="has-text-centered mt-5"><button class="button is-warning" id="raise-complaint">Raise
-                      complaint</button>
+                  <div class="has-text-centered mt-5"><button class="button is-warning" id="raise-complaint">Raise Issue</button>
                   </div>
                 </div>
               </div>
@@ -93,7 +92,7 @@
       </div>
   </section>
   
-  <div id="statusContainer" class="container"></div>
+  <div id="statusContainer" class="container columns is-3-desktop is-1-mobile" style="padding:10px;width:100%"></div>
   
   <!--Donation-->
   <section class="section" id="donation">
@@ -180,7 +179,7 @@
         <!--button-->
         <div class="field">
           <div class="mt-6 has-text-centered">
-            <input id="button" class="button is-warning" type="submit" value="Move to Public">
+            <input id="button" class="button is-warning" type="submit" value="Raise Issue">
           </div>
         </div>
       </form>
@@ -236,7 +235,8 @@
 
         var card = document.createElement("div");
         card.id = "card" + i;
-        card.className = "card"
+        card.className = "card";
+        card.style = "width:30%"
         var cardImage = document.createElement("div");
         cardImage.id = "cardImage" + i;
         cardImage.className = "card-image";
