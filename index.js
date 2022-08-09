@@ -154,12 +154,12 @@ app.post('/updateStatus', function (req, res) {
     const status = req.body.submitButton;
 
 
-    alldata = JSON.parse(alldata)
+    // alldata = JSON.parse(alldata)
     async function getDB() {
         const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
 
         alldata = await res.json();
-
+        
         if (status == 'Close') {
             alldata['issues'][id].status = 2;
         } else if (status == 'Investigating') {

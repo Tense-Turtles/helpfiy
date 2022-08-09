@@ -9,50 +9,50 @@
     // var btn = document.createElement("button");
     // btn.onclick = fun()
     // btn.innerHTML = 'Create Button'
-    async function updateInvestigating(id) {
-      console.log('investigating')
-      const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
-      alldata = await res.json();
-      alldata['issues'][id].status = 1
-      alldata = JSON.stringify(alldata)
-      // post to /updateStatus'
-      fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "text/plain;charset=UTF-8"
-        },
-        body: alldata,
-        referrer: ""
-      });
+    // async function updateInvestigating(id) {
+    //   console.log('investigating')
+    //   const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
+    //   alldata = await res.json();
+    //   alldata['issues'][id].status = 1
+    //   alldata = JSON.stringify(alldata)
+    //   // post to /updateStatus'
+    //   fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
+    //     method: 'POST',
+    //     headers: {
+    //       "Content-Type": "text/plain;charset=UTF-8"
+    //     },
+    //     body: alldata,
+    //     referrer: ""
+    //   });
 
 
-      document.getElementById("card" + id).style = "background-color: red"
+    //   document.getElementById("card" + id).style = "background-color: red"
 
-      document.getElementById("footbtn1" + id).remove();
-
-
-    }
-    async function updateClose(id) {
-      const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
-      alldata = await res.json();
-      alldata['issues'][id].status = 2;
-
-      await fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
-        method: 'POST',
-        body: JSON.stringify(alldata),
-      });
+    //   document.getElementById("footbtn1" + id).remove();
 
 
-      document.getElementById("card" + id).style = "background-color: green"
-      document.getElementById("footbtn1" + id).remove();
-      document.getElementById("footbtn2" + id).remove();
-      var footbtnClosed = document.createElement("a");
-      footbtnClosed.innerHTML = "Issue Closed"
-      footbtnClosed.className = "card-footer-item";
-      document.getElementById("card-footer" + id).appendChild(footbtnClosed);
+    // }
+    // async function updateClose(id) {
+    //   const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
+    //   alldata = await res.json();
+    //   alldata['issues'][id].status = 2;
+
+    //   await fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
+    //     method: 'POST',
+    //     body: JSON.stringify(alldata),
+    //   });
 
 
-    }
+    //   document.getElementById("card" + id).style = "background-color: green"
+    //   document.getElementById("footbtn1" + id).remove();
+    //   document.getElementById("footbtn2" + id).remove();
+    //   var footbtnClosed = document.createElement("a");
+    //   footbtnClosed.innerHTML = "Issue Closed"
+    //   footbtnClosed.className = "card-footer-item";
+    //   document.getElementById("card-footer" + id).appendChild(footbtnClosed);
+
+
+    // }
 
     async function fun() {
       const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
