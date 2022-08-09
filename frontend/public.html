@@ -256,8 +256,10 @@
           footbtn1.innerHTML = 'Issue is Open'
         } else if (alldata[i].status == 1) {
           footbtn1.innerHTML = 'Investigating'
+          document.getElementById("card" + i).style = "background-color: red"
         } else if (alldata[i].status == 2) {
           footbtn1.innerHTML = 'Issue Closed'
+          document.getElementById("card" + i).style = "background-color: green"
         }
 
         // var footbtn2 = document.createElement("a");
