@@ -162,10 +162,10 @@ app.post('/updateStatus', function (req, res) {
 
         if (status == 'Close') {
             alldata['issues'][id].status = 2;
-        } else if (status == 'Close') {
-            alldata['issues'][id].status = 2;
+        } else if (status == 'Investigating') {
+            alldata['issues'][id].status = 1;
         }
-        
+
         alldata = await res.json();
         await deleteAllData()
         await alldataUpload(JSON.stringify(alldata));
