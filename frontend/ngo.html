@@ -15,7 +15,7 @@
       alldata = await res.json();
       alldata['issues'][id].status = 1
       // post to /updateStatus'
-      await fetch ('https://hackoheist.el.r.appspot.com/updateStatus',{
+      await fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
         method: 'POST',
         body: {
           alldata
@@ -24,9 +24,9 @@
 
 
       document.getElementById("card" + id).style = "background-color: red"
-      
+
       document.getElementById("footbtn1" + id).remove();
-      
+
 
     }
     async function updateClose(id) {
@@ -34,7 +34,7 @@
       alldata = await res.json();
       alldata['issues'][id].status = 2;
 
-      await fetch ('https://hackoheist.el.r.appspot.com/updateStatus',{
+      await fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
         method: 'POST',
         body: {
           alldata
@@ -92,7 +92,7 @@
           footbtn1.className = "card-footer-item";
           footbtn1.innerHTML = 'Investigating'
           // footbtn1.onclick = "updateInvestigating(" + i + ")"
-          footbtn1.href =  "javascript:updateInvestigating("+i+");"
+          footbtn1.href = "javascript:updateInvestigating(" + i + ");"
           var footbtn2 = document.createElement("a");
           footbtn2.id = "footbtn2" + i;
           footbtn2.className = "card-footer-item";
@@ -178,7 +178,7 @@
     </footer>
   </div> -->
   <script>
-    
+
 
   </script>
 </body>
