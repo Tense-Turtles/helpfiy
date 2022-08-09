@@ -166,14 +166,13 @@ app.post('/updateStatus', function (req, res) {
             alldata['issues'][id].status = 1;
         }
 
-        alldata = await res.json();
         await deleteAllData()
         await alldataUpload(JSON.stringify(alldata));
 
     }
 
     getDB()
-    res.end();
+    res.redirect('https://black-hill-6592.on.fleek.co/success.html');
 
 })
 

@@ -84,7 +84,7 @@
           content.className = 'content';
           var myBr = document.createElement('br');
           var title = document.createElement('p');
-          title.className = 'title is-4'
+          title.className = 'title is-4';
           title.innerHTML = alldata[i].location;
           var subtitle = document.createElement('p');
           subtitle.className = 'subtitle is-6'
@@ -92,7 +92,8 @@
           var subtitlebtn = document.createElement("input");
           subtitlebtn.value = i;
           subtitlebtn.name = "idbtn";
-          subtitlebtn.type = 'button'
+          subtitlebtn.type = 'text';
+          subtitlebtn.readOnly = true
           var cardFooter = document.createElement("footer");
           cardFooter.id = "card-footer" + i;
           cardFooter.className = "card-footer";
