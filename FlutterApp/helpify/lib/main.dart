@@ -15,12 +15,11 @@ class WebViewApp extends StatelessWidget {
       home: Scaffold(
         extendBodyBehindAppBar: false,
         appBar: PreferredSize(
-
-             preferredSize: Size.fromHeight(0.02), 
-             child: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: Text(''),)
+          preferredSize: Size.fromHeight(2),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+          ),
         ),
         body: Center(
           child: WebView(
