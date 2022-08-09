@@ -15,11 +15,9 @@
       alldata = await res.json();
       alldata['issues'][id].status = 1
       // post to /updateStatus'
-      await fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
+      fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
         method: 'POST',
-        body: {
-          alldata
-        }
+        body: alldata
       });
 
 

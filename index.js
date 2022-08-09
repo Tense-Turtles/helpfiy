@@ -150,7 +150,7 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
 
 
 app.post('/updateStatus', function(req,res){
-    const alldata = req.body.alldata
+    const alldata = req.body
 
     async function getDB() {
         await deleteAllData()
