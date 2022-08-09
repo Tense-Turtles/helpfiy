@@ -14,7 +14,9 @@ A website and a cross-flatform App made for the <strong>Hackoheist</strong> 2022
 - As we are Decentralized, we are not hampered by any kind organization, etc.
 - This provides the public the freedom to live in clean environment and contribute in protecting the environment.
 
-You can find the PPT [here](https://bit.ly/3A4Asdo)
+You can Find the PPT [here](https://bit.ly/3A4Asdo)
+you can find the demo [here](https://youtu.be/agXyUSfSdAk)
+
 
 ## Development
 Endpoint for the [front-end](https://black-hill-6592.on.fleek.co/) 
@@ -32,3 +34,5 @@ Endpoint for the [back-end](https://hackoheist.el.r.appspot.com/)
 
 ## Installation
 No worries, we got it covered <br> just visit our site 
+
+
