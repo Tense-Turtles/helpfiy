@@ -4,15 +4,16 @@ All of it starts from you!
 A website and a cross-flatform App made for the <strong>Hackoheist</strong> 2022 Hackathon
 
 
-# Problem statement
-- Generally, Industry leak their pollutants into the reservoirs illegally, 
-- Inefficient waste disposal is carried out  which effect the environment.
-- Many illegal activities takes place all over the world.
+The problem Greensavers solves
+Even with strict regulations against industries and institutions to protect the environment, the government can not track everybody. Environmental NGOs fill this gap by monitoring the activites and reporting the concerned authotithies.
+But even they are limited to how much environmentally damaging activities they can investigate.
 
-# Solution 
-- A Decentralized app where the people can report the all-illegal activities to NGO.
-- As we are Decentralized, we are not hampered by any kind organization, etc.
-- This provides the public the freedom to live in clean environment and contribute in protecting the environment.
+This is where the role of a comman being or a resident comes in. A resident can spot such activity, but often cant take any action due to many reasons.
+
+To Fix this issue, we have made a decentralised website, which is hosted on IPFS, so anybody, including big industries will have a hard time taking it down. The User can raise an issue in the website by providing all neccessary details. Once the issue is logged, it is visible to the NGO, which can furhter get invovled in the case.
+
+All files related to the Issue is stored on IPFS, and the frontend for the website itself is hosted on IPFS
+We have also made a app wrapper in flutter, so it can be used on ios, android, windows, linux and macos too.
 
 You can Find the PPT [here](https://bit.ly/3A4Asdo)
 you can find the demo [here](https://youtu.be/agXyUSfSdAk)
