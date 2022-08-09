@@ -149,13 +149,27 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
 })
 
 
-app.post('/updateStatus', function(req,res){
-    const alldata = req.body
+app.post('/updateStatus', function (req, res) {
+    const id = req.body.idbtn;
+    const status = req.body.submitButton;
+
+
     alldata = JSON.parse(alldata)
     async function getDB() {
+        const res = await fetch('https://storageapi.fleek.co/1e4f9433-e9a2-4412-a561-9a1ddf54e93c-bucket/alldata.json')
+
+        alldata = await res.json();
+
+        if (status == 'Close') {
+            alldata['issues'][id].status = 2;
+        } else if (status == 'Close') {
+            alldata['issues'][id].status = 2;
+        }
+        
+        alldata = await res.json();
         await deleteAllData()
         await alldataUpload(JSON.stringify(alldata));
-    
+
     }
 
     getDB()

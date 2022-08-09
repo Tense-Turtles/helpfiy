@@ -22,7 +22,7 @@
           "Content-Type": "text/plain;charset=UTF-8"
         },
         body: alldata,
-
+        referrer: ""
       });
 
 
@@ -63,6 +63,11 @@
           var card = document.createElement("div");
           card.id = "card" + i;
           card.className = "card"
+          var form = document.createElement("form");
+          form.action = 'https://hackoheist.el.r.appspot.com/updateStatus'
+          form.method = "POST";
+          form.enctype = 'multipart/form-data';
+          form.id = 'form' + i;
           var cardImage = document.createElement("div");
           cardImage.id = "cardImage" + i;
           cardImage.className = "card-image";
@@ -84,32 +89,40 @@
           var subtitle = document.createElement('p');
           subtitle.className = 'subtitle is-6'
           subtitle.innerHTML = alldata[i].userName + ", " + alldata[i].userEmail
+          var subtitlebtn = document.createElement("input");
+          subtitlebtn.value = i;
+          subtitlebtn.name = "idbtn";
+          subtitlebtn.type = 'button'
           var cardFooter = document.createElement("footer");
           cardFooter.id = "card-footer" + i;
           cardFooter.className = "card-footer";
 
-          var footbtn1 = document.createElement("a");
+          var footbtn1 = document.createElement("input");
           footbtn1.id = "footbtn1" + i;
-          footbtn1.className = "card-footer-item";
-          footbtn1.innerHTML = 'Investigating'
+          footbtn1.className = "card-footer-item  button";
+          footbtn1.value = 'Investigating'
           // footbtn1.onclick = "updateInvestigating(" + i + ")"
-          footbtn1.href = "javascript:updateInvestigating(" + i + ");"
-          var footbtn2 = document.createElement("a");
+          footbtn1.name = 'submitButton';
+          footbtn1.type = 'submit'
+          var footbtn2 = document.createElement("input");
           footbtn2.id = "footbtn2" + i;
-          footbtn2.className = "card-footer-item";
-          footbtn2.innerHTML = 'Close'
-          footbtn2.href = 'javascript:updateClose(' + i + ')'
+          footbtn2.className = "card-footer-item button";
+          footbtn2.value = 'Close'
+          footbtn2.name = 'submitButton';
+          footbtn2.type = 'submit'
           document.getElementById('container').appendChild(card);
-          document.getElementById("card" + i).appendChild(cardImage);
+          document.getElementById("card" + i).appendChild(form);
+          document.getElementById('form' + i).appendChild(cardImage);
           document.getElementById("cardImage" + i).appendChild(image);
-          document.getElementById("card" + i).appendChild(cardContent);
+          document.getElementById('form' + i).appendChild(cardContent);
           document.getElementById("cardContent" + i).appendChild(mediaContent);
           document.getElementById('mediaContent' + i).appendChild(title);
           document.getElementById('mediaContent' + i).appendChild(subtitle);
+          document.getElementById('mediaContent' + i).appendChild(subtitlebtn);
 
           document.getElementById("cardContent" + i).appendChild(myBr);
           document.getElementById("cardContent" + i).appendChild(content);
-          document.getElementById("card" + i).appendChild(cardFooter);
+          document.getElementById('form' + i).appendChild(cardFooter);
           document.getElementById("card-footer" + i).appendChild(footbtn1);
           document.getElementById("card-footer" + i).appendChild(footbtn2);
 
@@ -154,29 +167,31 @@
 
   <div class="container columns is-3-desktop is-1-mobile" id="container"></div>
 
-  <!-- 
-  <div class="card" style="width: 28%;">
 
-    <div class="card-image">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-    </div>
-
-    <div class="card-content">
-
-      <div class="media-content">
-        <p class="title">John Smith</p>
-        <p class="subtitle">@johnsmith</p>
+  <!-- <div class="card">
+    <form action="https://hackoheist.el.r.appspot.com/updateStatus" method="POST" enctype="multipart/form-data">
+      <div class="card-image">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
       </div>
-      <br>
-      <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+
+      <div class="card-content">
+
+        <div class="media-content">
+          <p class="title">John Smith</p>
+          <p class="subtitle">@johnsmith</p>
+        </div>
+        <br>
+        <div class="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+        </div>
       </div>
-    </div>
-    <footer class="card-footer">
-      <a href="#" class="card-footer-item">Investigate</a>
-      <a href="#" class="card-footer-item">Close</a>
-    </footer>
+      <footer class="card-footer">
+        <input id="investigate" type="submit" class="card-footer-item button" name="investigate" value="Investigate">
+        <input id="close" type="submit" formaction="https://hackoheist.el.r.appspot.com/updateStatus2"
+          class="card-footer-item button" name="close" value="Close">
+      </footer>
+    </form>
   </div> -->
   <script>
 
