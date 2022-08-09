@@ -17,7 +17,7 @@
       // post to /updateStatus'
       fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
         method: 'POST',
-        body: alldata
+        body: JSON.stringify(alldata),
       });
 
 
@@ -34,9 +34,7 @@
 
       await fetch('https://hackoheist.el.r.appspot.com/updateStatus', {
         method: 'POST',
-        body: {
-          alldata
-        }
+        body: JSON.stringify(alldata),
       });
 
 

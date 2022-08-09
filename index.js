@@ -151,7 +151,7 @@ app.post('/createComplaint', upload.single('upfile'), (req, res) => {
 
 app.post('/updateStatus', function(req,res){
     const alldata = req.body.alldata
-
+    alldata = JSON.parse(alldata)
     async function getDB() {
         await deleteAllData()
         await alldataUpload(JSON.stringify(alldata));
