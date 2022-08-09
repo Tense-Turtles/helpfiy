@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors')
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const multer = require('multer')
 var fs = require('fs');
@@ -13,12 +14,12 @@ const apiSecret = process.env.FLEEK_API_SECRET;
 
 
 var app = express();
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
-
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   });
+app.use(cors())
 
 
 app.get('/', function (req, res) {
